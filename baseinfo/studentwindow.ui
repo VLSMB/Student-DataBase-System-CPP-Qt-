@@ -148,6 +148,9 @@
       <height>301</height>
      </rect>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
     <column>
      <property name="text">
       <string>学生编号</string>
@@ -165,12 +168,17 @@
     </column>
     <column>
      <property name="text">
-      <string>性别</string>
+      <string>年级</string>
      </property>
     </column>
     <column>
      <property name="text">
       <string>年龄</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>性别</string>
      </property>
     </column>
     <column>

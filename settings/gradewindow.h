@@ -1,7 +1,10 @@
 #ifndef GRADEWINDOW_H
 #define GRADEWINDOW_H
+#define TITLE "学生成绩管理系统"
 
 #include <QMainWindow>
+#include "database.h"
+#include <QInputDialog>
 
 namespace Ui {
 class GradeWindow;
@@ -17,6 +20,11 @@ public:
 
 private:
     Ui::GradeWindow *ui;
+
+public slots:
+    void delete_grade();
+    void add_grade();
+    void updata_grade();
 };
 
 #endif // GRADEWINDOW_H

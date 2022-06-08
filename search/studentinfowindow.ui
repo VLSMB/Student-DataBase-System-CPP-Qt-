@@ -109,6 +109,9 @@
       <height>301</height>
      </rect>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
     <column>
      <property name="text">
       <string>学生编号</string>
@@ -126,7 +129,7 @@
     </column>
     <column>
      <property name="text">
-      <string>性别</string>
+      <string>年级</string>
      </property>
     </column>
     <column>
@@ -136,12 +139,17 @@
     </column>
     <column>
      <property name="text">
-      <string>家庭地址</string>
+      <string>性别</string>
      </property>
     </column>
     <column>
      <property name="text">
       <string>联系电话</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>家庭地址</string>
      </property>
     </column>
    </widget>
@@ -174,6 +182,22 @@
     <hint type="destinationlabel">
      <x>706</x>
      <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editKey</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>558</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>18</y>
     </hint>
    </hints>
   </connection>

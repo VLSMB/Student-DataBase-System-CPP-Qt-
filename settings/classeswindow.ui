@@ -125,6 +125,9 @@
       <height>161</height>
      </rect>
     </property>
+    <property name="editTriggers">
+     <set>QAbstractItemView::NoEditTriggers</set>
+    </property>
     <column>
      <property name="text">
       <string>班级编号</string>
@@ -198,6 +201,38 @@
     <hint type="destinationlabel">
      <x>307</x>
      <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editID</sender>
+   <signal>returnPressed()</signal>
+   <receiver>editName</receiver>
+   <slot>setFocus()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editName</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnAdd</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>211</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>83</x>
+     <y>254</y>
     </hint>
    </hints>
   </connection>
