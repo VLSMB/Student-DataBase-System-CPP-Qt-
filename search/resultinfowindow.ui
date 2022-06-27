@@ -114,6 +114,11 @@
       <string>成绩</string>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>编号</string>
+     </property>
+    </column>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
@@ -190,6 +195,54 @@
     <hint type="destinationlabel">
      <x>764</x>
      <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxKinds</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>434</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxSubject</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>591</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>editName</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>269</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>18</y>
     </hint>
    </hints>
   </connection>

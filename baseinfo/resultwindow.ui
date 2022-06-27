@@ -153,11 +153,6 @@
     </property>
     <column>
      <property name="text">
-      <string>编号</string>
-     </property>
-    </column>
-    <column>
-     <property name="text">
       <string>学生编号</string>
      </property>
     </column>
@@ -186,6 +181,11 @@
       <string>成绩</string>
      </property>
     </column>
+    <column>
+     <property name="text">
+      <string>编号</string>
+     </property>
+    </column>
    </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
@@ -202,7 +202,7 @@
      </font>
     </property>
     <property name="text">
-     <string>学生姓名：</string>
+     <string>学生编号：</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
@@ -241,17 +241,10 @@
      <string>成绩：</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="editResult">
-    <property name="geometry">
-     <rect>
-      <x>687</x>
-      <y>356</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QComboBox" name="cboxGrade">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>233</x>
@@ -259,6 +252,9 @@
       <width>69</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QLabel" name="label_10">
@@ -299,6 +295,25 @@
      </rect>
     </property>
    </widget>
+   <widget class="QDoubleSpinBox" name="editResult">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>350</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="decimals">
+     <number>3</number>
+    </property>
+    <property name="maximum">
+     <double>1000.000000000000000</double>
+    </property>
+    <property name="singleStep">
+     <double>0.001000000000000</double>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
@@ -317,6 +332,86 @@
     </hint>
     <hint type="destinationlabel">
      <x>766</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tbResult</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>btnEdit</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>380</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>615</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxClass</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>424</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxKinds</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxStuName</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>414</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxSubject</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>584</x>
+     <y>364</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>495</x>
      <y>18</y>
     </hint>
    </hints>

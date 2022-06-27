@@ -203,5 +203,21 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>tbKinds</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>btnEdit</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>143</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>135</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>

@@ -9,7 +9,7 @@ StudentInfoWindow::StudentInfoWindow(QWidget *parent) :
     this->setFixedSize(705,343);
     this->setWindowModality(Qt::ApplicationModal);
     this->setWindowFlags(Qt::Dialog);
-    Refresh_Table(ui->tbStudent,"student");
+    Refresh_StudentInfo_Table_INITIAL(ui->tbStudent);
 
     QObject::connect(ui->btnQuery, &QPushButton::clicked, this, &this->search_student);
 }
@@ -21,7 +21,7 @@ StudentInfoWindow::~StudentInfoWindow()
 
 void StudentInfoWindow::search_student()
 {
-    Refresh_Table(ui->tbStudent, "student");
+    Refresh_StudentInfo_Table_INITIAL(ui->tbStudent);
     int col = ui->cboxCondition->currentIndex();
     for (int row=0; row<ui->tbStudent->rowCount(); row++)
     {

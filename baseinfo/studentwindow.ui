@@ -183,12 +183,12 @@
     </column>
     <column>
      <property name="text">
-      <string>家庭地址</string>
+      <string>联系电话</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>联系电话</string>
+      <string>家庭地址</string>
      </property>
     </column>
    </widget>
@@ -264,16 +264,6 @@
     </property>
     <property name="text">
      <string>年龄：</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="editAge">
-    <property name="geometry">
-     <rect>
-      <x>507</x>
-      <y>353</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -396,6 +386,22 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QSpinBox" name="editAge">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>350</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>250</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
@@ -415,6 +421,54 @@
     <hint type="destinationlabel">
      <x>709</x>
      <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxClass</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>363</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cboxGrade</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>btnQuery</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>434</x>
+     <y>18</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tbStudent</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>btnEdit</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>190</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>18</y>
     </hint>
    </hints>
   </connection>
